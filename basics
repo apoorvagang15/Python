@@ -1,0 +1,23 @@
+comments :
+# comment
+
+variables :
+name = 'abc'
+print(name)
+
+variable naming :
+must start with letter not number or symbol
+
+snake casing : abc_xyz  (separated by underscore)
+
+width, height = 460, 560
+print(width)          =460
+print(height)         =560
+
+taking input from user :
+yourName = input('enter name')
+
+to convert into number :
+int(input('number'))
+or
+print(int(num1) + int(num2))
