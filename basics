@@ -21,3 +21,13 @@ to convert into number :
 int(input('number'))
 or
 print(int(num1) + int(num2))
+
+
+sum of elements of array::
+sum = 0
+    for i in arr:
+        sum=sum+i
+    return sum 
+    
+    
+    
