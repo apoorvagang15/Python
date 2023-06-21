@@ -29,5 +29,8 @@ sum = 0
         sum=sum+i
     return sum 
     
-    
+
+
+You will be given an integer n, your task is to return the sum of all natural number less than or equal to n.
+    return (n*(n+1)//2)%1000000007
     
