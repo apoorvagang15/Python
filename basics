@@ -33,4 +33,21 @@ sum = 0
 
 You will be given an integer n, your task is to return the sum of all natural number less than or equal to n.
     return (n*(n+1)//2)%1000000007
+
+
+
+Binary Search :
+	def binarysearch(self, arr, n, k):
+		# code here
+		i=0
+		t=False
+		while not(t) and i<n:
+		    if arr[i]==k:
+		        t=True
+		    else:
+		        i+=1
+        if t:
+            return i
+        else:
+            return -1
     
