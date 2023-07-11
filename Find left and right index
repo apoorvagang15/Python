@@ -1,0 +1,25 @@
+Given an unsorted array A of size N that contains only positive integers, find a continuous sub-array that adds to a given number S and 
+return the left and right index(1-based indexing) of that subarray.
+
+
+class Solution:
+    def subArraySum(self,arr, n, s): 
+       #Write your code here
+        si = 0  
+        ei = 0  
+        curr_sum = 0
+       
+        while ei < n:
+            curr_sum = curr_sum + arr[ei]
+           
+            while curr_sum > s and si < ei:
+                curr_sum = curr_sum - arr[si]
+                si = si + 1
+            
+            if curr_sum == s:
+                return si + 1, ei + 1
+            
+            ei = ei + 1
+            
+        return [-1]
+
