@@ -1,0 +1,34 @@
+class Solution:
+    def findK(self, a, n, m, k):
+        # Write Your Code here
+        count = 0
+        top = left = 0
+        right = m-1
+        bottom = n-1
+        while count <= n*m:
+            for j in range(left,right+1):
+                count += 1
+                #print(a[top][j], end=' ')
+                if count == k:
+                    return a[top][j]
+            top += 1
+            for i in range(top,bottom+1):
+                count += 1
+                #print(a[right][i],end=' ')
+                if count == k:
+                    return a[i][right]
+            right -= 1
+            for j in range(right,left-1,-1):
+                count += 1
+                #print(a[bottom][j],end=' ')
+                if count == k:
+                    return a[bottom][j]
+            bottom -= 1
+            for i in range(bottom,top-1,-1):
+                count += 1
+                #print(a[left][i],end=' ')
+                if count == k:
+                    return a[i][left]
+            left += 1
+        
+        return -1
