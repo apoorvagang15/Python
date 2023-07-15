@@ -1,0 +1,5 @@
+def deleteMid(self, s, sizeOfStack):
+        # code here
+        s.pop((sizeOfStack-1)//2)
+        return s
+
